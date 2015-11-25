@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner v2.3.4</title>
+
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.3.4/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-2.3.4/jasmine.css">
+
+    <script src="lib/jasmine-2.3.4/jasmine.js"></script>
+    <script src="lib/jasmine-2.3.4/jasmine-html.js"></script>
+    <script src="lib/jasmine-2.3.4/boot.js"></script>
+
+    <!-- include source files here... -->
+    <!--<script src="src/Player.js"></script>-->
+    <!--<script src="src/Song.js"></script>-->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/underscore.js"></script>
+    <script type="text/javascript" src="../js/backbone.js"></script>
+    <script type="text/javascript" src="../js/backbone.localStorage.js"></script>
+
+    <!-- include spec files here... -->
+    <!--<script src="spec/SpecHelper.js"></script>-->
+    <!--<script src="spec/PlayerSpec.js"></script>-->
+    <script src="spec/TodosSpec.js"></script>
+
+  </head>
+
+  <body>
+    <!-- Templates -->
+
+    <script type="text/template" id="item-template">
+      <div class="view">
+        <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+        <label><%- title %></label>
+        <a class="destroy"></a>
+      </div>
+      <input class="edit" type="text" value="<%- title %>" />
+    </script>
+
+    <script type="text/template" id="stats-template">
+      <% if (done) { %>
+        <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+      <% } %>
+      <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+    </script>
+      
+    <script type="text/javascript" src="../js/todos.js"></script>
+  </body>
+</html>
